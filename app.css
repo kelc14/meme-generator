@@ -1,0 +1,351 @@
+body{
+background-color: hsl(147,64%,61%);
+}
+
+/* header and nav bar styling */
+    header {
+        background-color: hsl(210,91%,22%);
+        position: fixed;
+        width: 100%;
+        height:60px;
+        top: 0;
+        left: 0;
+        font-family: 'Lato', sans-serif;    
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3), 0 6px 20px 0 rgba(0,0,0,0.3); 
+        z-index: 3;
+    }
+
+    header h1{
+        display: flex;
+        color:hsl(88,57%,92%);
+        align-items: center;
+        font-size: 2vh;
+        font-weight: 900;
+        justify-content: center;
+        text-transform: uppercase;
+        /* position: fixed; */
+    
+    }
+
+    header ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    header li{
+        padding: 10px;
+        color: antiquewhite
+    }
+
+
+
+/* meme generator outer BOX styling */
+    .parent{
+        display:flex;
+        align-content: center;
+        justify-content: space-around;
+        flex-direction: column;
+        /* float:left; */
+    }
+
+    #about-text{
+        font-family: 'Lato', sans-serif;
+        font-size: 1.5em;
+        position: relative;
+        text-align: center;
+        width: 100%;
+        top: 50px;
+    }
+
+    section .generator-block{
+        border: 5px hsl(88,57%,92%) solid;
+        height: 840px;
+        /* width: 85%; */
+        max-width: 800px;
+        margin: auto;
+        position: relative;
+        text-align: center;
+        top: 50px;
+        background-color: hsl(210,91%,22%);
+        font-family: 'Lato', sans-serif;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3), 0 6px 20px 0 rgba(0,0,0,0.3); 
+    }
+/* div for each step 1-4 */
+    .step-block{
+        position:relative;
+        border: 2px hsl(88,57%,92%) solid;
+        padding-bottom: 15px;
+        height: 150px;
+    }
+
+    section .step-header{
+        text-align: left;
+        position: relative;
+
+        left: 10px;
+        font-weight: 700;
+        color: hsl(88,57%,92%);
+    }
+
+
+/* ALL TEXT INPUT IN THE FORM */
+    form .text-input{
+        width: 80%;
+        text-align: center;
+        margin-bottom: 10px;
+        /* height: 2em; */
+        background-color: hsl(88,57%,92%);
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+
+    }
+
+    form #top-text, #bottom-text{
+        height:2em;
+    }
+
+/* all buttons in the form */
+    form .generator-button{
+        background-color: hsl(88,57%,92%);
+        border: 2px hsl(88,57%,92%) solid;
+        border-radius: 2px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+    
+    }
+
+    #div-generate{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* submit button */
+    #finalButtonMakeMeme{
+        height: 90px;
+        width: 250px;
+        font-size: 1.5em;
+        background-color: hsl(143,62%,72%);
+        font-weight: 600;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3), 0 6px 20px 0 rgba(0,0,0,0.3); 
+        /* box shadow from CSS Schools Button Styling */
+    }
+
+/* step 3 choose font */
+    input[name=font-style]{
+        opacity: 0;
+    }
+
+    .font-label{
+        /* font-family: 'Lato', sans-serif;
+        font-weight: 400; */
+        color:hsl(88,57%,92%);
+        font-size: 1.5em;
+    
+    }
+
+    label[for=font-1] {
+        font-family: 'Roboto Mono', monospace;
+    
+        
+        /* font-weight: 700; */
+    }
+    label[for=font-2] {
+        font-family: 'Permanent Marker', cursive;
+        /* font-weight: 700; */
+    }
+    label[for=font-3] {
+        font-family: 'Fredoka One', cursive;
+        /* font-weight: 700; */
+    }
+
+   div.font-box{
+    display:inline;
+    padding: 5px;
+    margin: 5px;
+   }
+
+   .selected{
+    border: 3px solid hsl(88,57%,92%);
+   }
+
+   /* choose color */
+   input[name=font-color]{
+    opacity: 0;
+}
+
+
+    /* meme font styles */
+
+    .text {
+        /* font-size: 20px; */
+        color: white;
+    }
+
+    .font-1 {
+        font-family: 'Roboto Mono', monospace;
+        font-weight: 800;
+        font-size: 30px;
+        line-height: 30px;
+        -webkit-text-stroke-width: 1px;
+    }
+    .font-2 {
+        font-family: 'Permanent Marker', cursive;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 30px;
+        -webkit-text-stroke-width: 1px;
+    }
+    .font-3 {
+        font-family: 'Fredoka One', cursive;
+        font-weight: 800;
+        font-size: 30px;
+        line-height: 30px;
+        -webkit-text-stroke-width: 0.1px;
+    }
+
+    /* text outline from codesdope */
+    .font-black{
+        color: black;
+        
+        -webkit-text-stroke-color: white;
+    }
+    .font-white{
+        color:white;
+        
+        -webkit-text-stroke-color: black;
+    }
+    .font-purple{
+        color: rgb(195, 40, 195);
+        
+        -webkit-text-stroke-color: black;
+    }
+
+
+    /* PUT THE FONT OVER THE IMAGE */
+    /* text IS H3 class is text */
+    /* img has class of meme-image */
+    /* new div has a class of img-div */
+/* new memes (space below the meme generator that holds all new divs) */
+    .new-memes {
+        position: relative;
+        top: 80px;
+        /* float: right; */
+    }
+
+    .meme-loading{
+        margin: auto;
+        width: 400px;
+        height: 250px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .meme-loading h2{
+        margin: auto;
+        width: 100%;
+        display: block;
+        text-align: center;
+        position: relative;
+        color:hsl(210,91%,22%);
+        font-size: 1.5em;
+        font-family: 'Lato', sans-serif;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+    .meme-loading img{
+        margin: auto;
+        height: 250px;
+        display: block;
+        position: relative;
+    }
+
+    #meme-loading-text{
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        padding: 0px;
+        margin: 0px;
+        transform: translate(-50%, -50%); 
+        width: 225px;
+        max-width: 250px;
+        display: inline;
+        word-wrap: break-word;
+        font-size: 1em;
+        font-family: 'Roboto Mono', monospace;
+        font-weight: 900;
+        text-align: center;
+        color: white;
+    }
+   
+
+/* each div that holds an image & text */
+    div.img-div{
+        width: 300px;
+        text-align: center;
+        position: relative;
+        word-wrap: break-word;
+        
+        margin: auto;
+        padding: 10px;
+        float: left;
+    }
+
+    img.meme-image{
+        width:100%;
+        border-radius: 8px;
+    }
+
+    #text-top{
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+        width: 250px;
+        max-width: 300px;
+        padding: 5px;
+        word-wrap: break-word;
+        overflow: hidden;
+        
+    }
+
+    #text-bottom{
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        padding: 0px;
+        margin: 0px;
+        transform: translate(-50%, -50%); 
+        width: 250px;
+        max-width: 300px;
+        display: inline;
+        word-wrap: break-word;
+        overflow: hidden;
+    }
+
+    /* delete button */
+    .delete-button{
+        color:red;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        border-radius: 3px;
+        border: 1px solid rgba(0,0,0,0.3);
+        background-color: rgba(0,0,0,0.3);
+        font-size: 20px;
+        height: 30px;
+        width: 30px;
+   }
+
+.delete-button:hover{
+    background-color: red;
+    color: white;
+}

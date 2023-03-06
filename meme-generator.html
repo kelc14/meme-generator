@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Generator</title>
+
+    <link rel="stylesheet" href="app.css">
+    <!-- Google fonts for WEBSITE-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&display=swap" rel="stylesheet">
+
+        <!-- GOOGLE FONTS FOR MEME GENERATORS -->
+
+        <!-- font 1 roboto 900-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+        <!-- font 2 handwritten 400-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+        <!-- font 3 fredoka one 400 -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+        
+</head>
+<body>
+    <header>
+        <!-- <ul>
+            <li>New Meme</li>
+            <li>Image Library</li>
+        </ul> -->
+        <h1>Meme Generator</h1>
+    </header>
+
+<section class="parent">
+    <h2 id="about-text">Fill out the form to start generating memes!</h2>
+    <div class="generator-block">
+        
+        <form action="">
+            <!-- step one: add image link here: -->
+            <div class="step-block">
+                <h2 class="step-header">Step 1: Add Image Link</h2>
+                <!-- <input type="url" id="image-url" placeholder="Paste Image URL Here" class="text-input"><br> -->
+                <textarea name="image-url" id="image-url" cols="30" rows="3" placeholder="Paste the image URL here" class="text-input" required="required"></textarea>
+                <!-- <button class="generator-button">or choose from image library</button> -->
+            </div>
+             <!--step two: add text for both top and bottom here:  -->
+            <div class="step-block">
+                <h2 class="step-header">Step 2: Add Text</h2>
+                <input type="text" id="top-text" placeholder="Text for Top of Image" class="text-input" maxlength="30"><br>
+                <input type="text" id="bottom-text" placeholder="Text for Bottom of Image" class="text-input" maxlength="30"><br>
+            </div>
+
+            <!-- step three: choose which font style from radio buttons -->
+            <div class="step-block" id="font-style-checkboxes">
+                <h2 class="step-header">Step 3: Choose Font</h2>
+                <div class="outer-font-box">
+                        <div class="font-box" id="font-1-div">
+                            <input type="radio" name="font-style" id="font-1">
+                            <label for="font-1" class="font-label" id="font-label-1">ROBOT</label>
+                        </div>
+                        <div class="font-box" id="font-2-div">
+                            <input type="radio" name="font-style" id="font-2">
+                            <label for="font-2" class="font-label" id="font-label-2">HANDWRITTEN</label>
+                        </div>
+                        <div class="font-box" id="font-3-div">
+                            <input type="radio" name="font-style" id="font-3">
+                            <label for="font-3" class="font-label" id="font-label-3">BUBBLE</label>
+                        </div>   
+                </div>
+            </div>
+            <!-- step 4: pick a color -->
+            <div class="step-block" id="font-color-checkboxes">
+                <h2 class="step-header">Step 4: Choose Font Color</h2>
+                <div class="outer-font-box-color">
+                        <div class="font-box" id="font-1-div">
+                            <input type="radio" name="font-color" id="white">
+                            <label for="white" class="font-label" id="font-label-white">WHITE</label>
+                        </div>
+                        <div class="font-box" id="font-2-div">
+                            <input type="radio" name="font-color" id="black">
+                            <label for="black" class="font-label" id="font-label-black">BLACK</label>
+                        </div>
+                        <div class="font-box" id="font-3-div">
+                            <input type="radio" name="font-color" id="purple">
+                            <label for="purple" class="font-label" id="font-label-purple">PURPLE</label>
+                        </div>   
+                </div>
+            </div>
+<!-- step 5:submit your meme -->
+            <div class="step-block" id="div-generate">
+                <!-- <h2 class="step-header"> Generate Your Meme!</h2> -->
+                <button class="generator-button" id="finalButtonMakeMeme" type="submit">Generate Meme</button>
+            </div>
+        
+        </form>
+    </div>
+</section>
+ 
+<section class="new-memes">
+    <div class="meme-loading">
+        <!-- <h2>Dank Memes Loading...</h2> -->
+        <img src="https://media.tenor.com/FawYo00tBekAAAAM/loading-thinking.gif" alt="meme is loading gif" id="dogo-gif">
+        <h4 id="meme-loading-text">Just here waiting on your fresh content...</h4>
+    </div>
+    
+</section>
+    <script src="app.js"></script>
+</body>
+</html>
